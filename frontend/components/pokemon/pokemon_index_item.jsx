@@ -1,13 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router';
+
 
 const imgStyle = {
-  height: '20px',
-  width: 'auto'
+  height: 'auto',
+  width: '20px',
+  margin: '0 10px'
 };
 
 export const PokemonIndexItem = ({pokemon}) => (
   <li>
-    <img src={pokemon.image_url} style={imgStyle} />
-    {pokemon.name}
+    <Link to='/pokemon/:pokemonId'>
+      <img src={pokemon.image_url} style={imgStyle} />
+      {pokemon.name}
+    </Link>
   </li>
 );
