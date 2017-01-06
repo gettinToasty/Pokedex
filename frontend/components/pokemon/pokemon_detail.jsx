@@ -23,7 +23,7 @@ class PokemonDetail extends React.Component {
       height: '50px',
       width: 'auto',
 
-    }
+    };
 
     return (
       <div>
@@ -47,6 +47,7 @@ class PokemonDetail extends React.Component {
               <img src={item.image_url} style={itemStyle} />
             </Link>
           ))}
+          {this.props.children}
         </div>
       </div>
     );
