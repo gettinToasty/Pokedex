@@ -10,7 +10,7 @@ const imgStyle = {
 
 export const PokemonIndexItem = ({pokemon}) => (
   <li>
-    <Link to='/pokemon/:pokemonId'>
+    <Link to={`/pokemon/${pokemon.id}`}>
       <img src={pokemon.image_url} style={imgStyle} />
       {pokemon.name}
     </Link>
